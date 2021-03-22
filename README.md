@@ -1,2 +1,0 @@
-# arnaldogonzalezvisual
-Venezuelan visual artist based in Germany working with mixed media artworks (drawing, painting, collage, artist's book, photography, video and performance art) | Artista visual interdisciplinario venezolano radicado en Alemania. Trabajo con dibujo, pintura, collage, libro-arte, fotografía, video y arte de performance. Obras basadas en la poesía visual en entornos analógicos y digitales que presentan la figuración y abstracción del cuerpo humano, así como del paisaje para crear reflexiones sobre la migración, la identidad y el espacio psicogeográfico.
