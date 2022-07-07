@@ -706,7 +706,7 @@ a {
   background-image: url("../../../assets/images/r-troscurpos-by-arnaldo-gonzlez-1-1366x768.jpg");
 }
 .cid-taVm1AXnDl {
-  background-image: url("../../../assets/images/impuls-the-core-youtube-video-gif.gif");
+  background-image: url("../../../assets/images/banner-animated-impuls-the-core.gif");
 }
 .cid-taVm1AXnDl .icon-wrapper {
   margin: auto;
@@ -837,39 +837,6 @@ a {
   opacity: 1;
   background: #000;
   color: #fff;
-}
-.cid-taVLoKIlSA {
-  background-color: #000000;
-}
-.cid-taVLoKIlSA .mbr-fallback-image.disabled {
-  display: none;
-}
-.cid-taVLoKIlSA .mbr-fallback-image {
-  display: block;
-  background-size: cover;
-  background-position: center center;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-}
-.cid-taVLoKIlSA .mbr-section-title,
-.cid-taVLoKIlSA .mbr-text,
-.cid-taVLoKIlSA .mbr-section-btn {
-  text-align: center;
-}
-.cid-taVLoKIlSA .video-wrapper {
-  margin: auto;
-}
-.cid-taVLoKIlSA .video-wrapper iframe {
-  width: 100%;
-}
-.cid-taVLoKIlSA .mbr-section-title {
-  color: #e6c63b;
-}
-.cid-taVLoKIlSA .mbr-text,
-.cid-taVLoKIlSA .mbr-section-btn {
-  color: #ffffff;
 }
 .cid-tazBLvVJCV {
   background-color: #000000;
@@ -12609,67 +12576,4 @@ a {
   padding-top: 5rem;
   padding-bottom: 5rem;
   background-color: #ffffff;
-}
-.cid-taVGwsRRJ2 {
-  background-color: #000000;
-}
-.cid-taVGwsRRJ2 .mbr-fallback-image.disabled {
-  display: none;
-}
-.cid-taVGwsRRJ2 .mbr-fallback-image {
-  display: block;
-  background-size: cover;
-  background-position: center center;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-}
-.cid-taVGwsRRJ2 header {
-  position: relative;
-  background-color: black;
-  height: 100vh;
-  min-height: 25rem;
-  width: 100%;
-  overflow: hidden;
-}
-.cid-taVGwsRRJ2 header video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: 0;
-  transform: translateX(-50%) translateY(-50%);
-}
-.cid-taVGwsRRJ2 header .container {
-  position: relative;
-  z-index: 2;
-}
-.cid-taVGwsRRJ2 header .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: black;
-  opacity: 0.1;
-  z-index: 1;
-}
-.cid-taVHP96G5q {
-  background-image: url("../../../assets/images/background6.jpg");
-}
-.cid-taVHP96G5q .mbr-fallback-image.disabled {
-  display: none;
-}
-.cid-taVHP96G5q .mbr-fallback-image {
-  display: block;
-  background-size: cover;
-  background-position: center center;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
 }
