@@ -705,6 +705,9 @@ a {
 .cid-tazFAyn9Zr {
   background-image: url("../../../assets/images/r-troscurpos-by-arnaldo-gonzlez-1-1366x768.jpg");
 }
+.cid-taVm1AXnDl {
+  background-image: url("../../../assets/images/impuls-the-core-youtube-video-gif.gif");
+}
 .cid-taVm1AXnDl .icon-wrapper {
   margin: auto;
   background-color: #000000;
@@ -835,10 +838,13 @@ a {
   background: #000;
   color: #fff;
 }
-.cid-taVkT4T5x7 .mbr-fallback-image.disabled {
+.cid-taVLoKIlSA {
+  background-color: #000000;
+}
+.cid-taVLoKIlSA .mbr-fallback-image.disabled {
   display: none;
 }
-.cid-taVkT4T5x7 .mbr-fallback-image {
+.cid-taVLoKIlSA .mbr-fallback-image {
   display: block;
   background-size: cover;
   background-position: center center;
@@ -846,34 +852,24 @@ a {
   height: 100%;
   position: absolute;
   top: 0;
-  background-image: url("../../../assets/images/w-arnaldo-gonzalez-aff-hh-2021-7-2000x3008.jpg");
 }
-.cid-taVkT4T5x7 .mbr-section-title {
+.cid-taVLoKIlSA .mbr-section-title,
+.cid-taVLoKIlSA .mbr-text,
+.cid-taVLoKIlSA .mbr-section-btn {
+  text-align: center;
+}
+.cid-taVLoKIlSA .video-wrapper {
+  margin: auto;
+}
+.cid-taVLoKIlSA .video-wrapper iframe {
+  width: 100%;
+}
+.cid-taVLoKIlSA .mbr-section-title {
   color: #e6c63b;
 }
-.cid-taVu4lG8Mn .mbr-fallback-image.disabled {
-  display: none;
-}
-.cid-taVu4lG8Mn .mbr-fallback-image {
-  display: block;
-  background-size: cover;
-  background-position: center center;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  background-image: url("../../../assets/images/background13.jpg");
-}
-.cid-taVu4lG8Mn .mbr-fallback-image .videoDiv2 {
-  width: 100%;
-  max-width: 1200px;
-  margin: auto;
-  display: block;
-  position: relative;
-}
-.cid-taVu4lG8Mn .mbr-fallback-image .video2 {
-  width: 100%;
-  height: auto;
+.cid-taVLoKIlSA .mbr-text,
+.cid-taVLoKIlSA .mbr-section-btn {
+  color: #ffffff;
 }
 .cid-tazBLvVJCV {
   background-color: #000000;
@@ -12614,10 +12610,13 @@ a {
   padding-bottom: 5rem;
   background-color: #ffffff;
 }
-.cid-taVk7xdiok .mbr-fallback-image.disabled {
+.cid-taVGwsRRJ2 {
+  background-color: #000000;
+}
+.cid-taVGwsRRJ2 .mbr-fallback-image.disabled {
   display: none;
 }
-.cid-taVk7xdiok .mbr-fallback-image {
+.cid-taVGwsRRJ2 .mbr-fallback-image {
   display: block;
   background-size: cover;
   background-position: center center;
@@ -12625,16 +12624,52 @@ a {
   height: 100%;
   position: absolute;
   top: 0;
-  background-image: url("../../../assets/images/background13.jpg");
 }
-.cid-taVk7xdiok .mbr-fallback-image .videoDiv2 {
-  width: 100%;
-  max-width: 1200px;
-  margin: auto;
-  display: block;
+.cid-taVGwsRRJ2 header {
   position: relative;
-}
-.cid-taVk7xdiok .mbr-fallback-image .video2 {
+  background-color: black;
+  height: 100vh;
+  min-height: 25rem;
   width: 100%;
+  overflow: hidden;
+}
+.cid-taVGwsRRJ2 header video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
   height: auto;
+  z-index: 0;
+  transform: translateX(-50%) translateY(-50%);
+}
+.cid-taVGwsRRJ2 header .container {
+  position: relative;
+  z-index: 2;
+}
+.cid-taVGwsRRJ2 header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.1;
+  z-index: 1;
+}
+.cid-taVHP96G5q {
+  background-image: url("../../../assets/images/background6.jpg");
+}
+.cid-taVHP96G5q .mbr-fallback-image.disabled {
+  display: none;
+}
+.cid-taVHP96G5q .mbr-fallback-image {
+  display: block;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
 }
