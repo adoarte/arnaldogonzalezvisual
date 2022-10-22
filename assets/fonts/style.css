@@ -1,0 +1,10 @@
+@font-face {
+   font-family: 'CormorantGaramond-Regular';
+   font-display: swap;
+   src: url('CormorantGaramond-Regular/font.ttf');
+}
+@font-face {
+   font-family: 'PlayfairDisplay-VariableFont_wght';
+   font-display: swap;
+   src: url('PlayfairDisplay-VariableFont_wght/font.ttf');
+}
