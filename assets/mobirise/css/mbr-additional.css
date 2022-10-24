@@ -781,8 +781,6 @@ section.lazy-placeholder:after {
   color: #b1a374;
 }
 .cid-tl7Ifi4WjZ {
-  padding-top: 90px;
-  padding-bottom: 90px;
   background-image: url("../../../assets/images/arnaldo-gonzalez-visual-artist-3-copia.gif");
 }
 .cid-tl7Ifi4WjZ .mbr-text {
@@ -795,6 +793,40 @@ section.lazy-placeholder:after {
 .cid-tl7Ifi4WjZ .mbr-text,
 .cid-tl7Ifi4WjZ .mbr-section-btn {
   color: #e4d295;
+}
+.cid-tldYrJLSWr {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #152b29;
+}
+.cid-tldYrJLSWr .mbr-section-subtitle {
+  color: #f7ed4a;
+}
+.cid-tldYrJLSWr H2 {
+  color: #f7ed4a;
+}
+.cid-tldPf1Ukvd {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #152b29;
+}
+.cid-tldPf1Ukvd .mbr-text,
+.cid-tldPf1Ukvd blockquote {
+  color: #767676;
+}
+.cid-tldPf1Ukvd .mbr-text {
+  color: #f7ed4a;
+}
+.cid-tldXkqBJOP {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #152b29;
+}
+.cid-tldXkqBJOP .mbr-section-subtitle {
+  color: #767676;
+}
+.cid-tldXkqBJOP H2 {
+  color: #f7ed4a;
 }
 .cid-scLH0mEKrn {
   padding-top: 90px;
@@ -858,6 +890,11 @@ section.lazy-placeholder:after {
 @media (min-width: 992px) {
   .cid-scLH0mEKrn .mbr-figure {
     padding-right: 4rem;
+    padding-right: 0;
+    padding-left: 4rem;
+  }
+  .cid-scLH0mEKrn .media-container-row {
+    -webkit-flex-direction: row-reverse;
   }
 }
 @media (max-width: 991px) {
@@ -865,6 +902,13 @@ section.lazy-placeholder:after {
     padding-right: 0;
     padding-bottom: 1rem;
     margin-bottom: 2rem;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    padding-top: 1rem;
+    margin-top: 2rem;
+  }
+  .cid-scLH0mEKrn .media-container-row {
+    -webkit-flex-direction: column-reverse;
   }
 }
 @media (max-width: 300px) {
@@ -879,6 +923,100 @@ section.lazy-placeholder:after {
 .cid-scLH0mEKrn H4 {
   color: #b1a374;
 }
+.cid-tldXBLZgJp {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #152b29;
+}
+.cid-tldXBLZgJp .mbr-section-subtitle {
+  color: #767676;
+}
+.cid-tldXBLZgJp H2 {
+  color: #f7ed4a;
+}
+.cid-tldRm5HHUf {
+  padding-top: 90px;
+  padding-bottom: 0px;
+  background-color: #152b29;
+}
+.cid-tldRm5HHUf h2 {
+  text-align: left;
+}
+.cid-tldRm5HHUf h4 {
+  text-align: left;
+  font-weight: 500;
+}
+.cid-tldRm5HHUf p {
+  color: #767676;
+  text-align: left;
+}
+.cid-tldRm5HHUf .homebild {
+  position: relative;
+  display: inline-block;
+}
+.cid-tldRm5HHUf .homebild .img-top {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+.cid-tldRm5HHUf .homebild:hover .img-top {
+  display: inline;
+}
+.cid-tldRm5HHUf .aside-content {
+  flex-basis: 100%;
+  -webkit-flex-basis: 100%;
+}
+.cid-tldRm5HHUf .block-content {
+  display: -webkit-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  word-break: break-word;
+}
+.cid-tldRm5HHUf .media {
+  margin: initial;
+  align-items: center;
+  -webkit-align-items: center;
+}
+.cid-tldRm5HHUf .mbr-figure {
+  align-self: flex-start;
+  -webkit-align-self: flex-start;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.cid-tldRm5HHUf .card-img {
+  padding-right: 2rem;
+  width: auto;
+}
+.cid-tldRm5HHUf .card-img span {
+  font-size: 72px;
+  color: #707070;
+}
+@media (min-width: 992px) {
+  .cid-tldRm5HHUf .mbr-figure {
+    padding-right: 4rem;
+  }
+}
+@media (max-width: 991px) {
+  .cid-tldRm5HHUf .mbr-figure {
+    padding-right: 0;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 300px) {
+  .cid-tldRm5HHUf .card-img span {
+    font-size: 40px !important;
+  }
+}
+.cid-tldRm5HHUf P {
+  color: #b1a374;
+  text-align: left;
+}
+.cid-tldRm5HHUf H4 {
+  color: #b1a374;
+}
 .cid-tl6U3tGgaF {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -890,6 +1028,9 @@ section.lazy-placeholder:after {
 }
 .cid-tl6U3tGgaF .mbr-text {
   color: #b1a374;
+}
+.cid-tl6U3tGgaF .mbr-text P {
+  text-align: left;
 }
 .cid-tl7tPgFo4H {
   padding-top: 45px;
@@ -3134,7 +3275,7 @@ section.lazy-placeholder:after {
   text-align: center;
 }
 .cid-tl8feyLD2M {
-  background-image: url("../../../assets/images/banner-animated-impuls-the-core2.gif");
+  background-image: url("../../../assets/images/banner-animated-impuls-the-core4.gif");
 }
 .cid-tl8feyLD2M .mbr-media span {
   font-size: 48px;
