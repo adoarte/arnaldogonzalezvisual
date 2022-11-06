@@ -3275,7 +3275,7 @@ section.lazy-placeholder:after {
   text-align: center;
 }
 .cid-tl8feyLD2M {
-  background-image: url("../../../assets/images/banner-animated-impuls-the-core2.gif");
+  background-image: url("../../../assets/images/banner-animated-impuls-the-core6.gif");
 }
 .cid-tl8feyLD2M .mbr-media span {
   font-size: 48px;
@@ -4104,7 +4104,7 @@ section.lazy-placeholder:after {
   color: #767676 !important;
 }
 .cid-tlZjPUuGxg {
-  background-image: url("../../../assets/images/arnaldo-gonzalez-visual-artist-212-2902x43653.jpg");
+  background-image: url("../../../assets/images/arnaldo-gonzalez-visual-artist-212-2902x43657.jpg");
 }
 .cid-tlZjPUuGxg H1 {
   color: #c4bc3b;
@@ -4133,32 +4133,115 @@ section.lazy-placeholder:after {
 .cid-tlZhUvQMNH H3 {
   color: #c4bc3b;
 }
-.cid-tlZhUwmc0Y {
+.cid-tmn0GGo7kI {
+  padding-top: 90px;
+  padding-bottom: 0px;
+  background-color: #052d28;
+}
+.cid-tmn0GGo7kI h2 {
+  text-align: left;
+}
+.cid-tmn0GGo7kI h4 {
+  text-align: left;
+  font-weight: 500;
+}
+.cid-tmn0GGo7kI p {
+  color: #767676;
+  text-align: left;
+}
+.cid-tmn0GGo7kI .homebild {
+  position: relative;
+  display: inline-block;
+}
+.cid-tmn0GGo7kI .homebild .img-top {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+.cid-tmn0GGo7kI .homebild:hover .img-top {
+  display: inline;
+}
+.cid-tmn0GGo7kI .aside-content {
+  flex-basis: 100%;
+  -webkit-flex-basis: 100%;
+}
+.cid-tmn0GGo7kI .block-content {
+  display: -webkit-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  word-break: break-word;
+}
+.cid-tmn0GGo7kI .media {
+  margin: initial;
+  align-items: center;
+  -webkit-align-items: center;
+}
+.cid-tmn0GGo7kI .mbr-figure {
+  align-self: flex-start;
+  -webkit-align-self: flex-start;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+.cid-tmn0GGo7kI .card-img {
+  padding-right: 2rem;
+  width: auto;
+}
+.cid-tmn0GGo7kI .card-img span {
+  font-size: 72px;
+  color: #707070;
+}
+@media (min-width: 992px) {
+  .cid-tmn0GGo7kI .mbr-figure {
+    padding-right: 4rem;
+  }
+}
+@media (max-width: 991px) {
+  .cid-tmn0GGo7kI .mbr-figure {
+    padding-right: 0;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 300px) {
+  .cid-tmn0GGo7kI .card-img span {
+    font-size: 40px !important;
+  }
+}
+.cid-tmn0GGo7kI P {
+  color: #b1a374;
+  text-align: left;
+}
+.cid-tmn0GGo7kI H4 {
+  color: #b1a374;
+}
+.cid-tmmYiNSaYE {
   background: #152b29;
   padding-top: 75px;
   padding-bottom: 60px;
   background: linear-gradient(0deg, #09450e, #152b29);
 }
-.cid-tlZhUwmc0Y .image-block {
+.cid-tmmYiNSaYE .image-block {
   margin: auto;
 }
-.cid-tlZhUwmc0Y figcaption {
+.cid-tmmYiNSaYE figcaption {
   position: relative;
 }
-.cid-tlZhUwmc0Y figcaption div {
+.cid-tmmYiNSaYE figcaption div {
   position: absolute;
   bottom: 0;
   width: 100%;
 }
 @media (max-width: 768px) {
-  .cid-tlZhUwmc0Y .image-block {
+  .cid-tmmYiNSaYE .image-block {
     width: 100% !important;
   }
 }
 .cid-tlZhUwApfW {
   padding-top: 90px;
   padding-bottom: 60px;
-  background-color: #09450e;
+  background-image: url("../../../assets/images/arnaldo-gonzalez-visual-artist-3-copia8.gif");
 }
 .cid-tlZhUwApfW P {
   color: #767676;
@@ -4171,7 +4254,7 @@ section.lazy-placeholder:after {
   color: #b2ccd2;
 }
 .cid-tlZhUwApfW H3 {
-  color: #b2ccd2;
+  color: #c4bc3b;
 }
 .cid-tlZhUxMjPP {
   padding-top: 60px;
