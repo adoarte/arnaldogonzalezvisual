@@ -3275,7 +3275,7 @@ section.lazy-placeholder:after {
   text-align: center;
 }
 .cid-tl8feyLD2M {
-  background-image: url("../../../assets/images/banner-animated-impuls-the-core6.gif");
+  background-image: url("../../../assets/images/banner-animated-impuls-the-core9.gif");
 }
 .cid-tl8feyLD2M .mbr-media span {
   font-size: 48px;
@@ -4104,7 +4104,7 @@ section.lazy-placeholder:after {
   color: #767676 !important;
 }
 .cid-tlZjPUuGxg {
-  background-image: url("../../../assets/images/arnaldo-gonzalez-visual-artist-212-2902x43657.jpg");
+  background-image: url("../../../assets/images/arnaldo-gonzalez-visual-artist-212-2902x436510.jpg");
 }
 .cid-tlZjPUuGxg H1 {
   color: #c4bc3b;
@@ -4241,7 +4241,7 @@ section.lazy-placeholder:after {
 .cid-tlZhUwApfW {
   padding-top: 90px;
   padding-bottom: 60px;
-  background-image: url("../../../assets/images/arnaldo-gonzalez-visual-artist-3-copia8.gif");
+  background-image: url("../../../assets/images/arnaldo-gonzalez-visual-artist-3-copia11.gif");
 }
 .cid-tlZhUwApfW P {
   color: #767676;
@@ -4362,5 +4362,165 @@ section.lazy-placeholder:after {
   background-color: #232323;
 }
 .cid-tlZhUzrKmj .media-container-row .mbr-text {
+  text-align: center;
+}
+.cid-tmygEMha0G {
+  padding-top: 90px;
+  padding-bottom: 90px;
+  background-color: #052d28;
+  background: linear-gradient(45deg, #052d28, #09450e);
+}
+.cid-tmygEMha0G .media-container-row {
+  flex-direction: row-reverse;
+  -webkit-flex-direction: row-reverse;
+}
+@media (min-width: 992px) {
+  .cid-tmygEMha0G .mbr-figure {
+    padding-right: 4rem;
+    padding-right: 0;
+    padding-left: 4rem;
+  }
+}
+@media (max-width: 991px) {
+  .cid-tmygEMha0G .mbr-figure {
+    padding-bottom: 3rem;
+  }
+}
+@media (max-width: 767px) {
+  .cid-tmygEMha0G .mbr-text {
+    text-align: center;
+  }
+}
+.cid-tmygEMha0G H1 {
+  color: #c4bc3b;
+}
+.cid-tmygEMha0G .mbr-text,
+.cid-tmygEMha0G .mbr-section-btn {
+  color: #b2ccd2;
+}
+.cid-tmygEN2Uj6 {
+  background: linear-gradient(45deg, #052d28, #123515);
+}
+.cid-tmygEN2Uj6 .mbr-section-subtitle {
+  font-style: italic;
+  letter-spacing: 1rem;
+}
+.cid-tmygEN2Uj6 .mbr-section-title {
+  color: #c4bc3b;
+}
+.cid-tmygEN2Uj6 .mbr-text,
+.cid-tmygEN2Uj6 .mbr-section-btn {
+  color: #b2ccd2;
+  text-align: center;
+}
+.cid-tmygEN2Uj6 H3 {
+  color: #c4bc3b;
+}
+.cid-tmygEPoV3U {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  position: relative;
+  background-color: #152b29;
+}
+.cid-tmygEPoV3U .card {
+  border-radius: 0px;
+  margin-bottom: -1px;
+}
+.cid-tmygEPoV3U .card .card-header {
+  border-radius: 0px;
+  border: 0px;
+  padding: 0;
+}
+.cid-tmygEPoV3U .card .card-header a.panel-title {
+  margin-bottom: 0;
+  font-style: normal;
+  font-weight: 500;
+  display: block;
+  text-decoration: none !important;
+  margin-top: -1px;
+  line-height: normal;
+}
+.cid-tmygEPoV3U .card .card-header a.panel-title:focus {
+  text-decoration: none !important;
+}
+.cid-tmygEPoV3U .card .card-header a.panel-title h4 {
+  padding: 1.3rem 2rem;
+  border: 1px solid #dfdfdf;
+  margin-bottom: 0;
+}
+.cid-tmygEPoV3U .card .card-header a.panel-title h4 .sign {
+  padding-right: 1rem;
+}
+.cid-tmygEPoV3U .card .panel-body {
+  color: #767676;
+}
+.cid-tmygEPoV3U H2 {
+  color: #c4bc3b;
+}
+.cid-tmygEPoV3U H4 {
+  color: #e4d295;
+}
+.cid-tmygEPoV3U .panel-text {
+  color: #b1a374;
+}
+.cid-tmygEQ6WzY {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #152b29;
+}
+.cid-tmygEQ6WzY .mbr-text,
+.cid-tmygEQ6WzY blockquote {
+  color: #767676;
+}
+.cid-tmygEQ6WzY .mbr-text {
+  color: #e4d295;
+}
+.cid-tmygEQ6WzY .mbr-text P {
+  text-align: center;
+}
+.cid-tmygEQtGn5 {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #152b29;
+}
+.cid-tmygEQtGn5 .mbr-section-subtitle {
+  color: #f7ed4a;
+}
+.cid-tmygEQtGn5 H2 {
+  color: #f7ed4a;
+}
+.cid-tmygEQPEVR {
+  padding-top: 90px;
+  padding-bottom: 90px;
+  background: linear-gradient(0deg, #152b29, #152b29);
+}
+.cid-tmygEQPEVR .mbr-iconfont-social {
+  font-size: 32px;
+  color: #ff3366;
+}
+.cid-tmygEQPEVR .social-list a:focus {
+  text-decoration: none;
+}
+.cid-tmygEQPEVR H2 {
+  color: #b2ccd2;
+}
+.cid-tmygERngCU {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #152b29;
+}
+.cid-tmygERngCU .mbr-text,
+.cid-tmygERngCU blockquote {
+  color: #767676;
+}
+.cid-tmygERngCU .mbr-text {
+  color: #f7ed4a;
+}
+.cid-tmygERGqeu {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #232323;
+}
+.cid-tmygERGqeu .media-container-row .mbr-text {
   text-align: center;
 }
