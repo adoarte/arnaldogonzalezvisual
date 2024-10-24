@@ -18,9 +18,6 @@
 		<loc>https://arnaldogonzalezvisual.com/statement.html</loc>
 	</url>
 	<url>
-		<loc>https://arnaldogonzalezvisual.com/works.html</loc>
-	</url>
-	<url>
 		<loc>https://arnaldogonzalezvisual.com/bio.html</loc>
 	</url>
 	<url>
@@ -138,6 +135,9 @@
 		<loc>https://arnaldogonzalezvisual.com/press.html</loc>
 	</url>
 	<url>
-		<loc>https://arnaldogonzalezvisual.com/work.html</loc>
+		<loc>https://arnaldogonzalezvisual.com/list.html</loc>
+	</url>
+	<url>
+		<loc>https://arnaldogonzalezvisual.com/works.html</loc>
 	</url>
 </urlset>
