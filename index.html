@@ -78,7 +78,7 @@
     </nav>
 </section>
 
-<section class="engine"><a href="https://mobirise.info/n">simple web templates</a></section><section class="cid-veDdvVPuB9 mbr-fullscreen mbr-parallax-background" id="header2-5x">
+<section class="engine"><a href="https://mobirise.info/j">website templates</a></section><section class="cid-veDdvVPuB9 mbr-fullscreen mbr-parallax-background" id="header2-5x">
 
     
 
@@ -189,16 +189,15 @@
   
   <script>
 document.addEventListener("DOMContentLoaded", function(){
-  // 1. INYECTAR CLASE AL TEXTO DEL FADE (Busca por palabras clave seguras)
+  // 1. INYECTAR CLASE AL TEXTO DEL FADE
   const todosLosParrafos = document.querySelectorAll("p, div, span, h3");
   todosLosParrafos.forEach(el => {
-    // Buscamos solo por una palabra clave corta e inequívoca "becoming" u "stops behaving"
     if (el.textContent.includes("stops behaving") || el.textContent.includes("becoming landscapes")) {
       el.classList.add("mi-texto-fade");
     }
   });
 
-  // 2. LOGICA DEL CARRUSEL (Mantenemos tu arrastre perfecto)
+  // 2. LOGICA DEL CARRUSEL Y MODAL CON ZOOM DIRIGIDO AL PUNTERO
   const track = document.querySelector(".carousel-container");
   const slides = document.querySelectorAll(".slide img");
   const modal = document.getElementById("custom-modal");
@@ -214,10 +213,24 @@ document.addEventListener("DOMContentLoaded", function(){
   let scrollLeft = 0;
   let dragMoved = false;
 
+  // Variables para el control del zoom con la rueda del ratón
+  let currentScale = 1;
+  const minScale = 1;
+  const maxScale = 5; // Límite máximo de zoom (5x)
+  const zoomSpeed = 0.2; // Sensibilidad calibrada para el zoom
+
+  // Forzar estilos iniciales en la imagen del modal para transiciones limpias
+  if (modalImg) {
+    modalImg.style.transition = 'transform 0.1s ease-out';
+    modalImg.style.transformOrigin = 'center center';
+  }
+
+  // Evitar arrastre nativo de archivos de imagen
   slides.forEach((img) => {
     img.addEventListener('dragstart', (e) => e.preventDefault());
   });
 
+  // Controlar la apertura del Modal
   slides.forEach((img, index) => {
     img.addEventListener("click", (e) => {
       if (dragMoved) {
@@ -226,6 +239,7 @@ document.addEventListener("DOMContentLoaded", function(){
         return; 
       }
       if (modal && modalImg) {
+        resetZoom(); // Resetear zoom al abrir una nueva imagen
         modal.classList.add("active");
         modalImg.src = img.src;
         if (modalCaption) modalCaption.textContent = img.dataset.caption || "";
@@ -234,6 +248,7 @@ document.addEventListener("DOMContentLoaded", function(){
     });
   });
 
+  // Arrastre por ratón en el carrusel de la Home
   if (track) {
     track.addEventListener('mousedown', (e) => {
       isDragging = true;
@@ -263,12 +278,86 @@ document.addEventListener("DOMContentLoaded", function(){
     });
   }
 
-  if (modalClose) modalClose.addEventListener("click", () => modal.classList.remove("active"));
-  if (modal) modal.addEventListener("click", e => { if (e.target === modal) modal.classList.remove("active"); });
+  // ==========================================
+  // FUNCIONALIDAD DE ZOOM SEGUIDOR CON RUEDA (HOME)
+  // ==========================================
+  if (modal && modalImg) {
+    modal.addEventListener('wheel', function(e) {
+      e.preventDefault(); // Evita el scroll de fondo
+
+      // Calcular la posición del mouse relativa a las dimensiones de la imagen
+      const rect = modalImg.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      // Obtener porcentajes exactos de ubicación del puntero del ratón
+      const xPercent = (x / rect.width) * 100;
+      const yPercent = (y / rect.height) * 100;
+
+      // Cambiar nivel del zoom según dirección del scroll
+      if (e.deltaY < 0) {
+        currentScale = Math.min(maxScale, currentScale + zoomSpeed);
+      } else {
+        currentScale = Math.max(minScale, currentScale - zoomSpeed);
+      }
+
+      if (currentScale <= 1) {
+        resetZoom();
+      } else {
+        // Fijamos el centro de ampliación exactamente bajo el puntero actual
+        modalImg.style.transformOrigin = `${xPercent}% ${yPercent}%`;
+        modalImg.style.transform = `scale(${currentScale})`;
+        modalImg.style.cursor = 'zoom-out';
+      }
+    }, { passive: false });
+
+    // EXPLORACIÓN PANORÁMICA SUAVE AL MOVER EL RATÓN
+    modal.addEventListener('mousemove', function(e) {
+      if (currentScale <= 1) return;
+
+      const rect = modalImg.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      const xPercent = (x / rect.width) * 100;
+      const yPercent = (y / rect.height) * 100;
+
+      // Desplaza la imagen dinámicamente según la mirada del usuario
+      modalImg.style.transformOrigin = `${xPercent}% ${yPercent}%`;
+    });
+  }
+
+  // Función para restaurar la imagen a su tamaño original
+  function resetZoom() {
+    currentScale = 1;
+    if (modalImg) {
+      modalImg.style.transform = 'scale(1)';
+      modalImg.style.transformOrigin = 'center center';
+      modalImg.style.cursor = 'zoom-in';
+    }
+  }
+
+  // Controles de navegación y cierre del modal
+  if (modalClose) {
+    modalClose.addEventListener("click", () => {
+      modal.classList.remove("active");
+      resetZoom();
+    });
+  }
+  
+  if (modal) {
+    modal.addEventListener("click", e => { 
+      if (e.target === modal || (currentScale === 1 && e.target === modalImg)) {
+        modal.classList.remove("active");
+        resetZoom();
+      }
+    }); 
+  }
 
   if (prevBtn) {
     prevBtn.addEventListener("click", (e) => {
       e.stopPropagation();
+      resetZoom();
       currentIndex = (currentIndex - 1 + slides.length) % slides.length;
       if (modalImg) modalImg.src = slides[currentIndex].src;
       if (modalCaption) modalCaption.textContent = slides[currentIndex].dataset.caption || "";
@@ -278,6 +367,7 @@ document.addEventListener("DOMContentLoaded", function(){
   if (nextBtn) {
     nextBtn.addEventListener("click", (e) => {
       e.stopPropagation();
+      resetZoom();
       currentIndex = (currentIndex + 1) % slides.length;
       if (modalImg) modalImg.src = slides[currentIndex].src;
       if (modalCaption) modalCaption.textContent = slides[currentIndex].dataset.caption || "";
@@ -285,7 +375,10 @@ document.addEventListener("DOMContentLoaded", function(){
   }
 
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal) modal.classList.remove("active");
+    if (e.key === 'Escape' && modal) {
+      modal.classList.remove("active");
+      resetZoom();
+    }
   });
 });
 </script>
