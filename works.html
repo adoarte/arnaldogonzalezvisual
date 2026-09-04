@@ -58,7 +58,7 @@
     </nav>
 </section>
 
-<section class="engine"><a href="https://mobirise.info/e">make a site</a></section><section class="cid-vu0B1ZESHN" id="image3-9b">
+<section class="engine"><a href="https://mobirise.info/m">free site design templates</a></section><section class="cid-vu0B1ZESHN" id="image3-9b">
 
     
 
@@ -265,27 +265,7 @@
   <img src="file:///C:/Users/adoar/AppData/Local/Mobirise.com/Mobirise/adoarte_0040gmail_002ecom/userblocks/mobirise4/features19_35" alt="Expanded Image">
 </div>
 
-<script>
-  // Obtener elementos
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = lightbox.querySelector('img');
 
-  // Seleccionar todas las imágenes de tu bloque
-  const images = document.querySelectorAll('.features19 .item-img img');
-
-  images.forEach(img => {
-    img.addEventListener('click', () => {
-      lightboxImg.src = img.src;   // copiar la imagen al lightbox
-      lightbox.style.display = 'flex'; // mostrar lightbox
-    });
-  });
-
-  // Cerrar lightbox al hacer clic en el fondo
-  lightbox.addEventListener('click', () => {
-    lightbox.style.display = 'none';
-    lightboxImg.src = '';
-  });
-</script>
 
 </section>
 
@@ -384,27 +364,7 @@
   <img src="file:///C:/Users/adoar/AppData/Local/Mobirise.com/Mobirise/adoarte_0040gmail_002ecom/addons/mobirise4/components" alt="Expanded Image">
 </div>
 
-<script>
-  // Obtener elementos
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = lightbox.querySelector('img');
 
-  // Seleccionar todas las imágenes de tu bloque
-  const images = document.querySelectorAll('.features19 .item-img img');
-
-  images.forEach(img => {
-    img.addEventListener('click', () => {
-      lightboxImg.src = img.src;   // copiar la imagen al lightbox
-      lightbox.style.display = 'flex'; // mostrar lightbox
-    });
-  });
-
-  // Cerrar lightbox al hacer clic en el fondo
-  lightbox.addEventListener('click', () => {
-    lightbox.style.display = 'none';
-    lightboxImg.src = '';
-  });
-</script>
 
 </section>
 
@@ -502,27 +462,6 @@
   <img src="file:///C:/Users/adoar/AppData/Local/Mobirise.com/Mobirise/adoarte_0040gmail_002ecom/addons/mobirise4/components" alt="Expanded Image">
 </div>
 
-<script>
-  // Obtener elementos
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = lightbox.querySelector('img');
-
-  // Seleccionar todas las imágenes de tu bloque
-  const images = document.querySelectorAll('.features19 .item-img img');
-
-  images.forEach(img => {
-    img.addEventListener('click', () => {
-      lightboxImg.src = img.src;   // copiar la imagen al lightbox
-      lightbox.style.display = 'flex'; // mostrar lightbox
-    });
-  });
-
-  // Cerrar lightbox al hacer clic en el fondo
-  lightbox.addEventListener('click', () => {
-    lightbox.style.display = 'none';
-    lightboxImg.src = '';
-  });
-</script>
 
 </section>
 
@@ -621,27 +560,6 @@
   <img src="file:///C:/Users/adoar/AppData/Local/Mobirise.com/Mobirise/adoarte_0040gmail_002ecom/userblocks/mobirise4/features19_38" alt="Expanded Image">
 </div>
 
-<script>
-  // Obtener elementos
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = lightbox.querySelector('img');
-
-  // Seleccionar todas las imágenes de tu bloque
-  const images = document.querySelectorAll('.features19 .item-img img');
-
-  images.forEach(img => {
-    img.addEventListener('click', () => {
-      lightboxImg.src = img.src;   // copiar la imagen al lightbox
-      lightbox.style.display = 'flex'; // mostrar lightbox
-    });
-  });
-
-  // Cerrar lightbox al hacer clic en el fondo
-  lightbox.addEventListener('click', () => {
-    lightbox.style.display = 'none';
-    lightboxImg.src = '';
-  });
-</script>
 
 </section>
 
@@ -766,27 +684,6 @@
   <img src="file:///C:/Users/adoar/AppData/Local/Mobirise.com/Mobirise/adoarte_0040gmail_002ecom/addons/mobirise4/components" alt="Expanded Image">
 </div>
 
-<script>
-  // Obtener elementos
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = lightbox.querySelector('img');
-
-  // Seleccionar todas las imágenes de tu bloque
-  const images = document.querySelectorAll('.features19 .item-img img');
-
-  images.forEach(img => {
-    img.addEventListener('click', () => {
-      lightboxImg.src = img.src;   // copiar la imagen al lightbox
-      lightbox.style.display = 'flex'; // mostrar lightbox
-    });
-  });
-
-  // Cerrar lightbox al hacer clic en el fondo
-  lightbox.addEventListener('click', () => {
-    lightbox.style.display = 'none';
-    lightboxImg.src = '';
-  });
-</script>
 
 </section>
 
@@ -894,6 +791,46 @@
   <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>
   <script src="assets/theme/js/script.js"></script>
   
-  
+  <!-- CONTENEDOR DEL VISOR (LIGHTBOX) -->
+<div id="lightbox" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.95); justify-content:center; align-items:center; z-index:999999; cursor:pointer;">
+  <img src="" alt="Zoom" style="max-width:90%; max-height:90%; object-fit:contain; box-shadow: 0 10px 30px rgba(0,0,0,0.8); border: 1px solid rgba(255,255,255,0.1);">
+</div>
+
+<!-- SCRIPT GLOBAL INTELIGENTE -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox ? lightbox.querySelector('img') : null;
+
+    if (!lightbox || !lightboxImg) return;
+
+    // Escucha clics en toda la página de forma dinámica (inmune al scroll)
+    document.addEventListener('click', (e) => {
+      // Detecta imágenes en figuras, bloques de imágenes o tarjetas de Mobirise
+      const targetImg = e.target.closest('.mbr-figure img, .image-block img, .item-img img, .card-img img');
+      
+      // Evita activar el lightbox en el logo del menú o barra de navegación
+      if (targetImg && !targetImg.closest('.menu-logo, .navbar')) {
+        lightboxImg.src = targetImg.src;   // Copia la ruta de la imagen
+        lightbox.style.display = 'flex';   // Muestra el lightbox
+      }
+    });
+
+    // Cerrar el lightbox al hacer clic en el fondo oscuro
+    lightbox.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+      lightboxImg.src = '';
+    });
+
+    // Cerrar también al presionar la tecla Escape del teclado
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        lightbox.style.display = 'none';
+        lightboxImg.src = '';
+      }
+    });
+  });
+</script>
+
 </body>
 </html>

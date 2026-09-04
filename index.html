@@ -26,7 +26,27 @@
   <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
   
   
-  
+  <style>
+  /* Creamos la animación de desvanecimiento */
+  @keyframes entradaPoetica {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  /* Buscamos el bloque exacto del texto por su estilo de Mobirise template */
+  .carousel-wrapper + ::-webkit-scrollbar, 
+  amp-carousel + p, 
+  .carousel-wrapper ~ p,
+  section p {
+    /* Si el elemento contiene tu cita, se activará este efecto */
+  }
+
+  /* Para asegurarnos al 100%, creamos una clase manual */
+  .mi-texto-fade {
+    animation: entradaPoetica 3.5s ease-in-out forwards !important;
+  }
+</style>
+
 </head>
 <body>
   <section class="menu cid-veh5woY4cQ" once="menu" id="menu1-1">
@@ -58,7 +78,7 @@
     </nav>
 </section>
 
-<section class="engine"><a href="https://mobirise.info/t">amp template</a></section><section class="cid-veDdvVPuB9 mbr-fullscreen mbr-parallax-background" id="header2-5x">
+<section class="engine"><a href="https://mobirise.info/n">simple web templates</a></section><section class="cid-veDdvVPuB9 mbr-fullscreen mbr-parallax-background" id="header2-5x">
 
     
 
@@ -116,45 +136,7 @@
   </div>
 </div>
 
-<script>
-document.addEventListener("DOMContentLoaded", function(){
-  const slides = document.querySelectorAll(".slide img");
-  const modal = document.getElementById("custom-modal");
-  const modalImg = document.getElementById("modal-img");
-  const modalCaption = document.getElementById("modal-caption");
-  const modalClose = modal.querySelector(".modal-close");
-  const prevBtn = modal.querySelector(".modal-arrow.left");
-  const nextBtn = modal.querySelector(".modal-arrow.right");
 
-  let currentIndex = 0;
-
-  slides.forEach((img,index)=>{
-    img.addEventListener("click", ()=>{
-      modal.classList.add("active");
-      modalImg.src = img.src;
-      modalCaption.textContent = img.dataset.caption || "";
-      currentIndex = index;
-    });
-  });
-
-  modalClose.addEventListener("click", ()=> modal.classList.remove("active"));
-  modal.addEventListener("click", e=> { if(e.target===modal) modal.classList.remove("active"); });
-
-  prevBtn.addEventListener("click", e=>{
-    e.stopPropagation();
-    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-    modalImg.src = slides[currentIndex].src;
-    modalCaption.textContent = slides[currentIndex].dataset.caption || "";
-  });
-
-  nextBtn.addEventListener("click", e=>{
-    e.stopPropagation();
-    currentIndex = (currentIndex + 1) % slides.length;
-    modalImg.src = slides[currentIndex].src;
-    modalCaption.textContent = slides[currentIndex].dataset.caption || "";
-  });
-});
-</script>
 </div></section>
 
 <section class="cid-vugmLhXPdJ mbr-fullscreen mbr-parallax-background" id="header2-9z">
@@ -205,6 +187,108 @@ document.addEventListener("DOMContentLoaded", function(){
   <script src="assets/smoothscroll/smooth-scroll.js"></script>
   <script src="assets/theme/js/script.js"></script>
   
-  
+  <script>
+document.addEventListener("DOMContentLoaded", function(){
+  // 1. INYECTAR CLASE AL TEXTO DEL FADE (Busca por palabras clave seguras)
+  const todosLosParrafos = document.querySelectorAll("p, div, span, h3");
+  todosLosParrafos.forEach(el => {
+    // Buscamos solo por una palabra clave corta e inequívoca "becoming" u "stops behaving"
+    if (el.textContent.includes("stops behaving") || el.textContent.includes("becoming landscapes")) {
+      el.classList.add("mi-texto-fade");
+    }
+  });
+
+  // 2. LOGICA DEL CARRUSEL (Mantenemos tu arrastre perfecto)
+  const track = document.querySelector(".carousel-container");
+  const slides = document.querySelectorAll(".slide img");
+  const modal = document.getElementById("custom-modal");
+  const modalImg = document.getElementById("modal-img");
+  const modalCaption = document.getElementById("modal-caption");
+  const modalClose = modal ? modal.querySelector(".modal-close") : null;
+  const prevBtn = modal ? modal.querySelector(".modal-arrow.left") : null;
+  const nextBtn = modal ? modal.querySelector(".modal-arrow.right") : null;
+
+  let currentIndex = 0;
+  let isDragging = false;
+  let startX = 0;
+  let scrollLeft = 0;
+  let dragMoved = false;
+
+  slides.forEach((img) => {
+    img.addEventListener('dragstart', (e) => e.preventDefault());
+  });
+
+  slides.forEach((img, index) => {
+    img.addEventListener("click", (e) => {
+      if (dragMoved) {
+        e.preventDefault();
+        e.stopPropagation();
+        return; 
+      }
+      if (modal && modalImg) {
+        modal.classList.add("active");
+        modalImg.src = img.src;
+        if (modalCaption) modalCaption.textContent = img.dataset.caption || "";
+        currentIndex = index;
+      }
+    });
+  });
+
+  if (track) {
+    track.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      dragMoved = false;
+      startX = e.pageX - track.offsetLeft;
+      scrollLeft = track.scrollLeft;
+    });
+
+    track.addEventListener('mouseleave', () => { isDragging = false; });
+    
+    window.addEventListener('mouseup', () => {
+      if (isDragging) {
+        isDragging = false;
+        setTimeout(() => { dragMoved = false; }, 60);
+      }
+    });
+
+    track.addEventListener('mousemove', (e) => {
+      if (!isDragging) return;
+      e.preventDefault(); 
+      const x = e.pageX - track.offsetLeft;
+      const walk = (x - startX) * 1.5; 
+      if (Math.abs(walk) > 5) {
+        dragMoved = true;
+      }
+      track.scrollLeft = scrollLeft - walk;
+    });
+  }
+
+  if (modalClose) modalClose.addEventListener("click", () => modal.classList.remove("active"));
+  if (modal) modal.addEventListener("click", e => { if (e.target === modal) modal.classList.remove("active"); });
+
+  if (prevBtn) {
+    prevBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      if (modalImg) modalImg.src = slides[currentIndex].src;
+      if (modalCaption) modalCaption.textContent = slides[currentIndex].dataset.caption || "";
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      currentIndex = (currentIndex + 1) % slides.length;
+      if (modalImg) modalImg.src = slides[currentIndex].src;
+      if (modalCaption) modalCaption.textContent = slides[currentIndex].dataset.caption || "";
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal) modal.classList.remove("active");
+  });
+});
+</script>
+
 </body>
 </html>
