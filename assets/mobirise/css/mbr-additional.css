@@ -1265,11 +1265,15 @@ section.lazy-placeholder:after {
     flex-direction: column !important;
     justify-content: center !important;
     align-items: center !important;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    visibility: hidden !important;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
   }
   .cid-vw0nbXvvp9 .navbar-collapse.show {
     opacity: 1 !important;
+    pointer-events: auto !important;
+    visibility: visible !important;
     display: flex !important;
   }
   .cid-vw0nbXvvp9 .navbar-nav {
