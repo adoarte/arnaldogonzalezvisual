@@ -1261,20 +1261,32 @@ section.lazy-placeholder:after {
     height: 100vh !important;
     background-color: rgba(0, 0, 0, 0.95) !important;
     z-index: 9999 !important;
-    display: flex !important;
+    display: none !important;
     flex-direction: column !important;
     justify-content: center !important;
     align-items: center !important;
     opacity: 0 !important;
     pointer-events: none !important;
     visibility: hidden !important;
-    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
   }
   .cid-vw0nbXvvp9 .navbar-collapse.show {
+    display: flex !important;
     opacity: 1 !important;
     pointer-events: auto !important;
     visibility: visible !important;
-    display: flex !important;
+  }
+  .cid-vw0nbXvvp9 .navbar-collapse:not(.show) .navbar-nav,
+  .cid-vw0nbXvvp9 .navbar-collapse:not(.show) .nav-item,
+  .cid-vw0nbXvvp9 .navbar-collapse:not(.show) .nav-link {
+    pointer-events: none !important;
+    display: none !important;
+  }
+  .cid-vw0nbXvvp9 .navbar-collapse.show .navbar-nav,
+  .cid-vw0nbXvvp9 .navbar-collapse.show .nav-item,
+  .cid-vw0nbXvvp9 .navbar-collapse.show .nav-link {
+    pointer-events: auto !important;
+    display: block !important;
   }
   .cid-vw0nbXvvp9 .navbar-nav {
     text-align: center !important;
