@@ -129,7 +129,7 @@
               
 </section>
 
-<section class="engine"><a href="https://mobirise.info/f">simple site maker</a></section><section once="footers" class="cid-vugBAWPLlg" id="footer6-ag">
+<section class="engine"><a href="https://mobirise.info/a">online site builder</a></section><section once="footers" class="cid-vugBAWPLlg" id="footer6-ag">
 
     
 
@@ -188,21 +188,18 @@
   
   
   <script>
-// Evita que los enlaces invisibles intercepten los toques de tus videos
-  const navCollapse = document.querySelector('.navbar-collapse');
-  const toggler = document.querySelector('.navbar-toggler');
-  
-  if (navCollapse && toggler) {
+const toggler = document.querySelector('.navbar-toggler');
+  if (toggler) {
     toggler.addEventListener('click', function() {
-      setTimeout(() => {
-        if (!navCollapse.classList.contains('show')) {
-          navCollapse.blur(); // Remueve el foco activo al cerrar el menú
-        }
-      }, 350);
+      const navCollapse = document.querySelector('.navbar-collapse');
+      if (navCollapse && !navCollapse.classList.contains('show')) {
+        navCollapse.blur(); 
+      }
     });
   }
 
 });
 </script>
+
 </body>
 </html>

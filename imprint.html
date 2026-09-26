@@ -37,7 +37,7 @@
     </div>
 </section>
 
-<section class="engine"><a href="https://mobirise.info/u">bootstrap website templates</a></section><section once="footers" class="cid-vugkzY5Q7s" id="footer6-al">
+<section class="engine"><a href="https://mobirise.info/h">how to create a web page</a></section><section once="footers" class="cid-vugkzY5Q7s" id="footer6-al">
 
     
 
@@ -96,21 +96,18 @@
   
   
   <script>
-// Evita que los enlaces invisibles intercepten los toques de tus videos
-  const navCollapse = document.querySelector('.navbar-collapse');
-  const toggler = document.querySelector('.navbar-toggler');
-  
-  if (navCollapse && toggler) {
+const toggler = document.querySelector('.navbar-toggler');
+  if (toggler) {
     toggler.addEventListener('click', function() {
-      setTimeout(() => {
-        if (!navCollapse.classList.contains('show')) {
-          navCollapse.blur(); // Remueve el foco activo al cerrar el menú
-        }
-      }, 350);
+      const navCollapse = document.querySelector('.navbar-collapse');
+      if (navCollapse && !navCollapse.classList.contains('show')) {
+        navCollapse.blur(); 
+      }
     });
   }
 
 });
 </script>
+
 </body>
 </html>
