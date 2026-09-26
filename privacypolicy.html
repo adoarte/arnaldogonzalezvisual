@@ -64,7 +64,7 @@ Imprint: <p><a href="https://arnaldogonzalezvisual.com/impresum.html" target="_b
     </div>
 </section>
 
-<section class="engine"><a href="https://mobirise.info/a">online website builder</a></section><section once="footers" class="cid-vugQ5soA0y" id="footer6-ap">
+<section class="engine"><a href="https://mobirise.info/d">site maker</a></section><section once="footers" class="cid-vugQ5soA0y" id="footer6-ap">
 
     
 
@@ -122,5 +122,22 @@ Imprint: <p><a href="https://arnaldogonzalezvisual.com/impresum.html" target="_b
   <script src="assets/theme/js/script.js"></script>
   
   
+  <script>
+// Evita que los enlaces invisibles intercepten los toques de tus videos
+  const navCollapse = document.querySelector('.navbar-collapse');
+  const toggler = document.querySelector('.navbar-toggler');
+  
+  if (navCollapse && toggler) {
+    toggler.addEventListener('click', function() {
+      setTimeout(() => {
+        if (!navCollapse.classList.contains('show')) {
+          navCollapse.blur(); // Remueve el foco activo al cerrar el menú
+        }
+      }, 350);
+    });
+  }
+
+});
+</script>
 </body>
 </html>

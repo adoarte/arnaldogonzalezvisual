@@ -76,7 +76,7 @@
               
 </section>
 
-<section class="engine"><a href="https://mobirise.info">Mobirise</a></section><section once="footers" class="cid-vugrXpacFe" id="footer6-a9">
+<section class="engine"><a href="https://mobirise.info/s">free bootstrap theme</a></section><section once="footers" class="cid-vugrXpacFe" id="footer6-a9">
 
     
 
@@ -134,5 +134,22 @@
   <script src="assets/theme/js/script.js"></script>
   
   
+  <script>
+// Evita que los enlaces invisibles intercepten los toques de tus videos
+  const navCollapse = document.querySelector('.navbar-collapse');
+  const toggler = document.querySelector('.navbar-toggler');
+  
+  if (navCollapse && toggler) {
+    toggler.addEventListener('click', function() {
+      setTimeout(() => {
+        if (!navCollapse.classList.contains('show')) {
+          navCollapse.blur(); // Remueve el foco activo al cerrar el menú
+        }
+      }, 350);
+    });
+  }
+
+});
+</script>
 </body>
 </html>

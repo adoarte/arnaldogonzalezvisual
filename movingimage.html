@@ -70,7 +70,7 @@
               
 </section>
 
-<section class="engine"><a href="https://mobirise.info">Mobirise</a></section><section class="mbr-section article content1 cid-vwcgjRzENg" id="content1-cu">
+<section class="engine"><a href="https://mobirise.info/v">free html templates</a></section><section class="mbr-section article content1 cid-vwcgjRzENg" id="content1-cu">
     
      
 
@@ -423,5 +423,22 @@
   });
 </script>
 
+  <script>
+// Evita que los enlaces invisibles intercepten los toques de tus videos
+  const navCollapse = document.querySelector('.navbar-collapse');
+  const toggler = document.querySelector('.navbar-toggler');
+  
+  if (navCollapse && toggler) {
+    toggler.addEventListener('click', function() {
+      setTimeout(() => {
+        if (!navCollapse.classList.contains('show')) {
+          navCollapse.blur(); // Remueve el foco activo al cerrar el menú
+        }
+      }, 350);
+    });
+  }
+
+});
+</script>
 </body>
 </html>

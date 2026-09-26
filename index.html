@@ -79,7 +79,7 @@
     </nav>
 </section>
 
-<section class="engine"><a href="https://mobirise.info/y">free html web templates</a></section><section class="cid-veDdvVPuB9 mbr-fullscreen mbr-parallax-background" id="header2-5x">
+<section class="engine"><a href="https://mobirise.info/m">free web design templates</a></section><section class="cid-veDdvVPuB9 mbr-fullscreen mbr-parallax-background" id="header2-5x">
 
     
 
@@ -389,5 +389,22 @@ document.addEventListener("DOMContentLoaded", function(){
 </script>
 
 
+  <script>
+// Evita que los enlaces invisibles intercepten los toques de tus videos
+  const navCollapse = document.querySelector('.navbar-collapse');
+  const toggler = document.querySelector('.navbar-toggler');
+  
+  if (navCollapse && toggler) {
+    toggler.addEventListener('click', function() {
+      setTimeout(() => {
+        if (!navCollapse.classList.contains('show')) {
+          navCollapse.blur(); // Remueve el foco activo al cerrar el menú
+        }
+      }, 350);
+    });
+  }
+
+});
+</script>
 </body>
 </html>
